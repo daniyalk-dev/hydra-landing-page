@@ -1,8 +1,12 @@
+import logoImg from "../../assets/images/logoImg.png";
+import logoText from "../../assets/images/logoText.png";
+
 const Header = () => {
   return (
     <header>
       <div>
-        <img src="" alt="logo" />
+        <img src={logoImg} alt="logo-img" />
+        <img src={logoText} alt="logo-text" />
       </div>
       <nav>
         <a href="#">ABOUT</a>

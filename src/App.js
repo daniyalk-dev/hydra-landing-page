@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import HeroSection from "./sections/hero/hero";
+import HeroSection from "./sections/hero/hero-section";
 
 function App() {
   return (
