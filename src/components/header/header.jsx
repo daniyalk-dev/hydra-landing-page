@@ -1,9 +1,10 @@
 import logoImg from "../../assets/images/logoImg.png";
 import logoText from "../../assets/images/logoText.png";
+import styles from "./header.module.css";
 
 const Header = () => {
   return (
-    <header>
+    <header id={styles.header}>
       <div>
         <img src={logoImg} alt="logo-img" />
         <img src={logoText} alt="logo-text" />
