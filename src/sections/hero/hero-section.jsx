@@ -1,12 +1,14 @@
-import Header from "../../components/header/header";
+import styles from "./hero-section.module.css";
+import heroSection from "../../assets/images/hero-section.png";
 
 const HeroSection = () => {
   return (
-    <div id="hero-section">
-      <Header />
+    <div id={styles["hero-section"]}>
       <div className="row">
         <div className="col">
-          <h2>Dive into The Depths Of Virtual Reality</h2>
+          <h2>
+            <span>Dive</span> into The Depths Of <span>Virtual Reality</span>
+          </h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore nisl tincidunt eget.
@@ -18,7 +20,7 @@ const HeroSection = () => {
           </a>
         </div>
         <div className="col">
-          <img src="" alt="hero-img" />
+          <img src={heroSection} alt="hero-img" />
         </div>
       </div>
     </div>
