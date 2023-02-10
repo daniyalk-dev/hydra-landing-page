@@ -6,3 +6,29 @@
 #app-wrapper {
   background-color: var(--primary-color);
 }
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.btn {
+  border-radius: 20px;
+  font-size: 12px;
+  box-sizing: border-box;
+  width: 150px;
+  height: 45px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #8176AF 0%, var(--secondary-color) 100%);
+  border: none;
+}
+
+.btn-secondary {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  margin-right: 15px;
+}

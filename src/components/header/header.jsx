@@ -5,7 +5,7 @@ import styles from "./header.module.css";
 const Header = () => {
   return (
     <header id={styles.header}>
-      <div>
+      <div className={styles["logo-container"]}>
         <img src={logoImg} alt="logo-img" />
         <img src={logoText} alt="logo-text" />
       </div>
@@ -16,8 +16,8 @@ const Header = () => {
         <a href="#">HOW TO</a>
       </nav>
       <div>
-        <button>CONTACT US</button>
-        <button>JOIN HYDRA</button>
+        <button className="btn btn-secondary">CONTACT US</button>
+        <button className="btn btn-primary">JOIN HYDRA</button>
       </div>
     </header>
   );

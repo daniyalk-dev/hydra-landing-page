@@ -5,8 +5,10 @@ import HeroSection from "./sections/hero/hero-section";
 function App() {
   return (
     <div id="app-wrapper">
-      <Header />
-      <HeroSection />
+      <div className="container">
+        <Header />
+        <HeroSection />
+      </div>
     </div>
   );
 }
