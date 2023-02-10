@@ -1,21 +1,43 @@
+import { useEffect, useState } from "react";
 import logoImg from "../../assets/images/logoImg.png";
 import logoText from "../../assets/images/logoText.png";
 import styles from "./header.module.css";
+import hamburgerIcon from "../../assets/icons/hamburger.png";
 
 const Header = () => {
+  const [show, setShow] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  const resize = () => {
+    if (window.innerWidth > 767) setShow(false);
+    setScreenWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", resize);
+    return () => window.removeEventListener("resize", resize);
+  }, []);
+
   return (
     <header id={styles.header}>
-      <div className={styles["logo-container"]}>
+      <a href="#" className={styles["logo-container"]}>
         <img src={logoImg} alt="logo-img" />
         <img src={logoText} alt="logo-text" />
+      </a>
+      <div className={styles.toggler}>
+        <button onClick={() => setShow(!show)}>
+          <i>
+            <img src={hamburgerIcon} alt="collapse-icon" />
+          </i>
+        </button>
       </div>
-      <nav>
+      <nav style={!show && screenWidth <= 767 ? { display: "none" } : null}>
         <a href="#">ABOUT</a>
         <a href="#">SERVICES</a>
         <a href="#">TECHNOLOGIES</a>
         <a href="#">HOW TO</a>
       </nav>
-      <div>
+      <div style={!show && screenWidth <= 767 ? { display: "none" } : null}>
         <button className="btn btn-secondary">CONTACT US</button>
         <button className="btn btn-primary">JOIN HYDRA</button>
       </div>

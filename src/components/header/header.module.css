@@ -1,5 +1,6 @@
 #header {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 30px 0;
@@ -9,6 +10,11 @@
     color: #fff;
     text-decoration: none;
     font-size: 12px;
+    transition: color 0.5s;
+}
+
+#header a:hover {
+    color: var(--secondary-color);
 }
 
 #header a:not(:last-child) {
@@ -18,8 +24,55 @@
 .logo-container {
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .logo-container img:first-child {
     margin-right: 10px;
+}
+
+.toggler {
+    display: none;
+}
+
+.toggler button {
+    background: transparent;
+    border: none;
+}
+
+.toggler i {
+    display: inline-blo;
+}
+
+@media screen and (max-width: 1050px) {
+    #header nav {
+        width: 50%;
+        text-align: end;
+    }
+
+    #header>*:last-child {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .toggler {
+        display: block;
+    }
+
+    #header nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    #header nav a {
+        width: 100%;
+        text-align: center;
+        padding: 5px 0;
+        margin-right: 0 !important;
+    }
 }

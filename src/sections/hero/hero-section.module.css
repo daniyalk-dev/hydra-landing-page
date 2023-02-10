@@ -28,11 +28,78 @@
 .call-to-action {
     display: flex;
     align-items: center;
+    height: 120px;
 }
 
 .call-to-action a,
 .call-to-action i {
     display: inline-block;
-    width: fit-content;
-    height: fit-content;
+    width: 100px;
+    height: 100px;
+    transition: width 0.5s, height 0.5s;
+}
+
+.call-to-action img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.call-to-action a:hover,
+.call-to-action a:hover i {
+    width: 120px;
+    height: 120px;
+}
+
+@media screen and (max-width: 1050px) {
+
+    .col:first-child h2 {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .col:first-child h2 span {
+        font-size: 36px;
+    }
+
+    .col:last-child img {
+        width: 297px;
+        height: 259px;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+
+    .col {
+        width: 100% !important;
+        text-align: center;
+    }
+
+    .call-to-action {
+        justify-content: center;
+        height: auto;
+    }
+
+    .call-to-action a {
+        display: none;
+    }
+
+    .call-to-action button {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .col:first-child p {
+        display: none;
+    }
+
+    .call-to-action button {
+        width: 100%;
+    }
 }
