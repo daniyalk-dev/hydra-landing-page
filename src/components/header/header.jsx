@@ -31,16 +31,20 @@ const Header = () => {
           </i>
         </button>
       </div>
-      <nav style={!show && screenWidth <= 767 ? { display: "none" } : null}>
-        <a href="#">ABOUT</a>
-        <a href="#">SERVICES</a>
-        <a href="#">TECHNOLOGIES</a>
-        <a href="#">HOW TO</a>
-      </nav>
-      <div style={!show && screenWidth <= 767 ? { display: "none" } : null}>
-        <button className="btn btn-secondary">CONTACT US</button>
-        <button className="btn btn-primary">JOIN HYDRA</button>
-      </div>
+      {!show && screenWidth <= 767 ? null : (
+        <>
+          <nav>
+            <a href="#">ABOUT</a>
+            <a href="#">SERVICES</a>
+            <a href="#">TECHNOLOGIES</a>
+            <a href="#">HOW TO</a>
+          </nav>
+          <div className={styles["call-to-action"]}>
+            <button className="btn btn-secondary">CONTACT US</button>
+            <button className="btn btn-primary">JOIN HYDRA</button>
+          </div>
+        </>
+      )}
     </header>
   );
 };

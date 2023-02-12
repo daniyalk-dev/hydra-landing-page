@@ -1,0 +1,74 @@
+.carousel {
+    position: relative;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-wrapper {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+.icon-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.detail {
+    font-size: 14px;
+}
+
+.prev-btn,
+.next-btn {
+    display: none;
+}
+
+@media screen and (max-width: 575px) {
+
+    .prev-btn,
+    .next-btn {
+        display: block;
+        position: absolute;
+        top: 12vw;
+        width: 30px;
+        height: 30px;
+        color: #fff;
+        border: 1px solid #fff;
+        background: transparent;
+        border-radius: 50%;
+    }
+
+    .prev-btn {
+        left: 0;
+        transform: translateX(50%);
+    }
+
+    .next-btn {
+        right: 0;
+        transform: translateX(-50%);
+    }
+
+    .icon-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+
+    .title {
+        display: none
+    }
+
+    .detail {
+        font-size: 12px;
+    }
+}

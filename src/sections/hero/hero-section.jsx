@@ -1,8 +1,29 @@
 import styles from "./hero-section.module.css";
 import heroSection from "../../assets/images/hero-section.png";
 import rightArrowIcon from "../../assets/icons/arrow-small-right.png";
+import Carousel from "../../components/carousel/carousel";
+import locationIcon from "../../assets/icons/location-icon.png";
+import phoneIcon from "../../assets/icons/phone-icon.png";
+import messageIcon from "../../assets/icons/message-icon.png";
 
 const HeroSection = () => {
+  const items = [
+    {
+      icon: locationIcon,
+      title: "Pay Us a Visit",
+      detail: "Union St, Seattle, WA 98101, United States",
+    },
+    {
+      icon: phoneIcon,
+      title: "Give Us a Call",
+      detail: "(110) 1111-1010",
+    },
+    {
+      icon: messageIcon,
+      title: "Send Us a Message",
+      detail: "Contact@HydraVTech.com",
+    },
+  ];
   return (
     <div id={styles["hero-section"]}>
       <div className={styles.row}>
@@ -27,6 +48,9 @@ const HeroSection = () => {
         <div className={styles.col}>
           <img src={heroSection} alt="hero-img" />
         </div>
+      </div>
+      <div className={styles["contact-options"]}>
+        <Carousel items={items} />
       </div>
     </div>
   );

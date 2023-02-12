@@ -50,7 +50,7 @@
         text-align: end;
     }
 
-    #header>*:last-child {
+    .call-to-action {
         width: 100%;
         text-align: center;
     }
@@ -74,5 +74,18 @@
         text-align: center;
         padding: 5px 0;
         margin-right: 0 !important;
+    }
+}
+
+@media screen and (max-width: 575px) {
+
+    .call-to-action {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .call-to-action button:not(:last-child) {
+        margin: 0 0 10px
     }
 }
