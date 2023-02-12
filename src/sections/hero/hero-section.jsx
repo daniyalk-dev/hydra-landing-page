@@ -1,7 +1,7 @@
 import styles from "./hero-section.module.css";
 import heroSection from "../../assets/images/hero-section.png";
 import rightArrowIcon from "../../assets/icons/arrow-small-right.png";
-import Carousel from "../../components/carousel/carousel";
+import Slider from "../../components/slider/slider";
 import locationIcon from "../../assets/icons/location-icon.png";
 import phoneIcon from "../../assets/icons/phone-icon.png";
 import messageIcon from "../../assets/icons/message-icon.png";
@@ -50,7 +50,7 @@ const HeroSection = () => {
         </div>
       </div>
       <div className={styles["contact-options"]}>
-        <Carousel items={items} />
+        <Slider items={items} />
       </div>
     </div>
   );

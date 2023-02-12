@@ -1,11 +1,16 @@
-import { useState } from "react";
-import styles from "./carousel.module.css";
+import { useEffect, useState } from "react";
+import styles from "./slider.module.css";
 
-const Carousel = ({ items }) => {
+const Slider = ({ items }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(handleNext, 5000);
+    return () => clearInterval(intervalId);
+  }, [activeIndex]);
+
   const handleNext = () => {
-    const newIndex = activeIndex + 1;
-    setActiveIndex(newIndex % items.length);
+    setActiveIndex((index) => (index + 1) % items.length);
   };
   const handlePrev = () => {
     const newIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
@@ -45,4 +50,4 @@ const Carousel = ({ items }) => {
   );
 };
 
-export default Carousel;
+export default Slider;
