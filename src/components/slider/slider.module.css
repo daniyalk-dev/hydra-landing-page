@@ -1,11 +1,19 @@
-.carousel {
+.slider {
+    display: flex;
     position: relative;
+    justify-content: center;
 }
 
-.carousel-item {
+.slide,
+.contact-option {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 10px;
+}
+
+.contact-option:not(:last-child) {
+    border-right: 1px solid #c0b7e854;
 }
 
 .icon-wrapper {
@@ -29,18 +37,12 @@
     font-size: 14px;
 }
 
-.prev-btn,
-.next-btn {
-    display: none;
-}
-
 @media screen and (max-width: 575px) {
 
     .prev-btn,
     .next-btn {
         display: block;
         position: absolute;
-        top: 12vw;
         width: 30px;
         height: 30px;
         color: #fff;
@@ -62,10 +64,6 @@
     .icon-wrapper {
         width: 40px;
         height: 40px;
-    }
-
-    .title {
-        display: none
     }
 
     .detail {

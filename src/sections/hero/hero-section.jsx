@@ -7,7 +7,7 @@ import phoneIcon from "../../assets/icons/phone-icon.png";
 import messageIcon from "../../assets/icons/message-icon.png";
 
 const HeroSection = () => {
-  const items = [
+  const slides = [
     {
       icon: locationIcon,
       title: "Pay Us a Visit",
@@ -50,7 +50,9 @@ const HeroSection = () => {
         </div>
       </div>
       <div className={styles["contact-options"]}>
-        <Slider items={items} />
+        <div>
+          <Slider slides={slides} />
+        </div>
       </div>
     </div>
   );

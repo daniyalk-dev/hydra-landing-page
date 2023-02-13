@@ -58,6 +58,13 @@
     height: 0;
     padding-bottom: calc(100%/(256/35));
     color: #fff;
+    position: relative;
+}
+
+.contact-options>div {
+    position: absolute;
+    top: 3vw;
+    width: 100%;
 }
 
 @media screen and (max-width: 1050px) {
@@ -114,5 +121,9 @@
     .contact-options {
         background: url(../../assets/images/radial-gradient-mobile.png) center/contain no-repeat;
         padding-bottom: calc(100%/(355/117));
+    }
+
+    .contact-options>div {
+        top: 10vw;
     }
 }
