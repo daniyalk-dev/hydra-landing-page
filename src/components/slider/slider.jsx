@@ -29,7 +29,7 @@ const Slider = ({ slides }) => {
 
   return (
     <div className={styles.slider}>
-      {screenWidth <= 575 ? (
+      {screenWidth <= 991 ? (
         <>
           <button className={styles["prev-btn"]} onClick={handlePrev}>
             {"<"}
@@ -41,7 +41,12 @@ const Slider = ({ slides }) => {
             <i className={styles["icon-wrapper"]}>
               <img src={slides[activeIndex].icon} alt="" />
             </i>
-            <div className={styles.detail}>{slides[activeIndex].detail}</div>
+            <div className={styles.info}>
+              {screenWidth > 575 ? (
+                <div className={styles.title}>{slides[activeIndex].title}</div>
+              ) : null}
+              <div className={styles.detail}>{slides[activeIndex].detail}</div>
+            </div>
           </div>
         </>
       ) : (

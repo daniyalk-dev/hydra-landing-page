@@ -67,6 +67,20 @@
     width: 100%;
 }
 
+@media screen and (min-width: 1400px) {
+    .contact-options {
+        width: 1280px;
+        height: 175px;
+        display: flex;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    /* .contact-options>div {
+
+    } */
+}
+
 @media screen and (max-width: 1050px) {
 
     .col:first-child h2 {

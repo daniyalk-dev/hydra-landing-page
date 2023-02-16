@@ -7,9 +7,13 @@
 .slide,
 .contact-option {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 0 10px;
+    justify-content: center;
+}
+
+.contact-option {
+    width: 33%;
+    box-sizing: border-box;
 }
 
 .contact-option:not(:last-child) {
@@ -18,8 +22,9 @@
 
 .icon-wrapper {
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
 }
 
 .icon-wrapper img {
@@ -31,13 +36,31 @@
 .title {
     font-size: 24px;
     font-weight: 700;
+    margin-bottom: 10px;
 }
 
 .detail {
     font-size: 14px;
 }
 
-@media screen and (max-width: 575px) {
+
+@media screen and (max-width: 1199px) {
+
+    .icon-wrapper img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .title {
+        font-size: 18px
+    }
+
+    .detail {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 991px) {
 
     .prev-btn,
     .next-btn {
@@ -65,8 +88,6 @@
         width: 40px;
         height: 40px;
     }
-
-    .detail {
-        font-size: 12px;
-    }
 }
+
+/* @media screen and (max-width: 575px) {} */
