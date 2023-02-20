@@ -1,12 +1,25 @@
+import { useState, useEffect } from "react";
 import styles from "./hero-section.module.css";
 import heroSection from "../../assets/images/hero-section.png";
+import heroSectionMob from "../../assets/images/hero-section-mobile.png";
 import rightArrowIcon from "../../assets/icons/arrow-small-right.png";
-import Slider from "../../components/slider/slider";
+import Slider from "../../components/contact-slider/contact-slider";
 import locationIcon from "../../assets/icons/location-icon.png";
 import phoneIcon from "../../assets/icons/phone-icon.png";
 import messageIcon from "../../assets/icons/message-icon.png";
 
 const HeroSection = () => {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  const resize = () => {
+    setScreenWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", resize);
+    return () => window.removeEventListener("resize", resize);
+  }, []);
+
   const slides = [
     {
       icon: locationIcon,
@@ -46,7 +59,10 @@ const HeroSection = () => {
           </div>
         </div>
         <div className={styles.col}>
-          <img src={heroSection} alt="hero-img" />
+          <img
+            src={screenWidth > 575 ? heroSection : heroSectionMob}
+            alt="hero-img"
+          />
         </div>
       </div>
       <div className={styles["contact-options"]}>
