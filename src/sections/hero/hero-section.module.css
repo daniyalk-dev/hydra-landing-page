@@ -9,6 +9,11 @@
     width: 42%;
 }
 
+.col:first-child .vector {
+    position: absolute;
+    left: 0;
+}
+
 .col:first-child h2 {
     font-weight: 700;
     font-size: 46px;
@@ -24,6 +29,30 @@
 
 .col:first-child p {
     text-align: justify;
+}
+
+#heroImg {
+    position: relative;
+}
+
+.col:last-child img.vector {
+    position: absolute;
+    z-index: -1;
+}
+
+.col:last-child img.vector:nth-child(1) {
+    top: 80px;
+    right: 0;
+}
+
+.col:last-child img.vector:nth-child(2) {
+    top: 0;
+    right: 120px;
+}
+
+.col:last-child img.vector:nth-child(3) {
+    top: 290px;
+    right: 0;
 }
 
 .call-to-action {
@@ -88,11 +117,29 @@
         font-size: 36px;
     }
 
-    .col:last-child img {
+    #heroImg {
         width: 297px;
         height: 259px;
     }
 
+    .col:last-child img.vector {
+        transform: scale(0.6);
+    }
+
+    .col:last-child img.vector:nth-child(1) {
+        top: 25px;
+        right: 0;
+    }
+
+    .col:last-child img.vector:nth-child(2) {
+        top: -60px;
+        right: 15px;
+    }
+
+    .col:last-child img.vector:nth-child(3) {
+        top: 200px;
+        right: -125px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -103,6 +150,33 @@
     .col {
         width: 100% !important;
         text-align: center;
+    }
+
+    .col:first-child .vector {
+        display: none;
+    }
+
+    .col:last-child {
+        position: relative;
+    }
+
+    .col:last-child img.vector {
+        transform: scale(0.8)
+    }
+
+    .col:last-child img.vector:nth-child(1) {
+        top: -160px;
+        right: 50px;
+    }
+
+    .col:last-child img.vector:nth-child(2) {
+        top: -250px;
+        right: 105px;
+    }
+
+    .col:last-child img.vector:nth-child(3) {
+        top: 30px;
+        right: -50px;
     }
 
     .call-to-action {
@@ -124,7 +198,7 @@
         display: none;
     }
 
-    .col:last-child img {
+    #heroImg {
         width: initial;
         height: initial;
     }
@@ -144,7 +218,7 @@
 }
 
 @media screen and (max-width: 370px) {
-    .col:last-child img {
+    #heroImg {
         max-width: 100%;
         height: auto;
     }

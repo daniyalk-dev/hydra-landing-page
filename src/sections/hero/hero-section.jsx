@@ -7,6 +7,10 @@ import Slider from "../../components/contact-slider/contact-slider";
 import locationIcon from "../../assets/icons/location-icon.png";
 import phoneIcon from "../../assets/icons/phone-icon.png";
 import messageIcon from "../../assets/icons/message-icon.png";
+import vector1 from "../../assets/vectorImages/vector1.svg";
+import vector2 from "../../assets/vectorImages/vector2.svg";
+import vector3 from "../../assets/vectorImages/vector3.svg";
+import vector4 from "../../assets/vectorImages/vector4.svg";
 
 const HeroSection = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -41,6 +45,7 @@ const HeroSection = () => {
     <div id={styles["hero-section"]}>
       <div className={styles.row}>
         <div className={styles.col}>
+          <img className={styles.vector} src={vector4} alt="vector4" />
           <h2>
             <span>Dive</span> into The Depths Of <span>Virtual Reality</span>
           </h2>
@@ -59,7 +64,11 @@ const HeroSection = () => {
           </div>
         </div>
         <div className={styles.col}>
+          <img className={styles.vector} src={vector1} alt="vector1" />
+          <img className={styles.vector} src={vector2} alt="vector2" />
+          <img className={styles.vector} src={vector3} alt="vector3" />
           <img
+            id={styles.heroImg}
             src={screenWidth > 575 ? heroSection : heroSectionMob}
             alt="hero-img"
           />

@@ -5,6 +5,8 @@
 
 #app-wrapper {
   background-color: var(--primary-color);
+  position: relative;
+  z-index: 0;
 }
 
 .container {
