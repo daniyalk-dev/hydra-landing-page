@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import styles from "./hero-section.module.css";
-import heroSection from "../../assets/images/hero-section.png";
-import heroSectionMob from "../../assets/images/hero-section-mobile.png";
+import heroImg from "../../assets/images/heroImg.png";
+// import heroShadow from "../../assets/images/heroShadow.png";
+import heroImgMob from "../../assets/images/heroImg-mobile.png";
+// import heroShadowMob from "../../assets/images/heroShadow-mobile.png";
 import rightArrowIcon from "../../assets/icons/arrow-small-right.png";
 import Slider from "../../components/contact-slider/contact-slider";
 import locationIcon from "../../assets/icons/location-icon.png";
@@ -67,11 +69,12 @@ const HeroSection = () => {
           <img className={styles.vector} src={vector1} alt="vector1" />
           <img className={styles.vector} src={vector2} alt="vector2" />
           <img className={styles.vector} src={vector3} alt="vector3" />
-          <img
-            id={styles.heroImg}
-            src={screenWidth > 575 ? heroSection : heroSectionMob}
-            alt="hero-img"
-          />
+          <div id={styles["heroImgWrapper"]}>
+            <img
+              src={screenWidth > 575 ? heroImg : heroImgMob}
+              alt="hero-img"
+            />
+          </div>
         </div>
       </div>
       <div className={styles["contact-options"]}>

@@ -31,9 +31,9 @@
     text-align: justify;
 }
 
-#heroImg {
-    position: relative;
-}
+/* #heroImgWrapper {
+    background: url(../../assets/images/heroShadow.png) no-repeat center/cover;
+} */
 
 .col:last-child img.vector {
     position: absolute;
@@ -117,7 +117,7 @@
         font-size: 36px;
     }
 
-    #heroImg {
+    #heroImgWrapper img {
         width: 297px;
         height: 259px;
     }
@@ -145,6 +145,7 @@
 @media screen and (max-width: 767px) {
     .row {
         flex-direction: column-reverse;
+        margin-bottom: 50px;
     }
 
     .col {
@@ -161,22 +162,20 @@
     }
 
     .col:last-child img.vector {
-        transform: scale(0.8)
+        transform: scale(0.8) translateX(50%);
+        right: 35% !important;
     }
 
     .col:last-child img.vector:nth-child(1) {
         top: -160px;
-        right: 50px;
     }
 
     .col:last-child img.vector:nth-child(2) {
         top: -250px;
-        right: 105px;
     }
 
     .col:last-child img.vector:nth-child(3) {
         top: 30px;
-        right: -50px;
     }
 
     .call-to-action {
@@ -194,17 +193,22 @@
 }
 
 @media screen and (max-width: 575px) {
+    .col:first-child h2 {
+        width: 90%;
+        margin: 20px auto;
+    }
+
     .col:first-child p {
         display: none;
     }
 
-    #heroImg {
+    #heroImgWrapper img {
         width: initial;
         height: initial;
     }
 
     .call-to-action button {
-        width: 100%;
+        width: 90%;
     }
 
     .contact-options {
@@ -218,8 +222,20 @@
 }
 
 @media screen and (max-width: 370px) {
-    #heroImg {
+    #heroImgWrapper img {
         max-width: 100%;
         height: auto;
+    }
+
+    .col:first-child h2 {
+        font-size: 18px;
+    }
+
+    .col:first-child h2 span {
+        font-size: 30px;
+    }
+
+    .col:last-child img.vector {
+        transform: scale(0.6) translate(70%, -10%);
     }
 }
