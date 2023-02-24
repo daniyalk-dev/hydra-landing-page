@@ -84,6 +84,38 @@
         transform: translateX(-50%);
     }
 
+    .slide.sliding-forward {
+        animation: slide-fwd 0.7s;
+    }
+
+    .slide.sliding-backward {
+        animation: slide-bwd 0.7s;
+    }
+
+    @keyframes slide-fwd {
+        from {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+
+        to {
+            opacity: initial;
+            transform: initial;
+        }
+    }
+
+    @keyframes slide-bwd {
+        from {
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+
+        to {
+            opacity: initial;
+            transform: initial;
+        }
+    }
+
     .icon-wrapper {
         width: 40px;
         height: 40px;

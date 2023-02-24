@@ -4,6 +4,7 @@ import styles from "./contact-slider.module.css";
 const Slider = ({ slides }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [sliding, setSliding] = useState(null);
 
   const resize = () => {
     setScreenWidth(window.innerWidth);
@@ -20,11 +21,13 @@ const Slider = ({ slides }) => {
 
   const handleNext = () => {
     setActiveIndex((index) => (index + 1) % slides.length);
+    setSliding("forward");
   };
 
   const handlePrev = () => {
     const newIndex = activeIndex === 0 ? slides.length - 1 : activeIndex - 1;
     setActiveIndex(newIndex);
+    setSliding("backward");
   };
 
   return (
@@ -37,7 +40,12 @@ const Slider = ({ slides }) => {
           <button className={styles["next-btn"]} onClick={handleNext}>
             {">"}
           </button>
-          <div className={styles.slide}>
+          <div
+            className={`${styles.slide} ${
+              sliding === "forward" ? styles["sliding-forward"] : ""
+            } ${sliding === "backward" ? styles["sliding-backward"] : ""}`}
+            onAnimationEnd={() => setSliding(null)}
+          >
             <i className={styles["icon-wrapper"]}>
               <img src={slides[activeIndex].icon} alt="" />
             </i>
