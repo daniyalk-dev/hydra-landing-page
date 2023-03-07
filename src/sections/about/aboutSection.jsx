@@ -6,7 +6,7 @@ import vector2 from "../../assets/vectorImages/aboutSection/vector2.svg";
 
 const AboutSection = () => {
   return (
-    <div id={styles["about-section"]}>
+    <div id="about-section" className={styles["about-section"]}>
       <div className={styles.row}>
         <div className={styles.col}>
           <h2>

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 import logoImg from "../../assets/images/logoImg.png";
 import logoImgMob from "../../assets/images/logoImg-mobile.png";
 import logoText from "../../assets/images/logoText.png";
@@ -21,8 +22,8 @@ const Header = () => {
   }, []);
 
   return (
-    <header id={styles.header}>
-      <a href="#" className={styles["logo-container"]}>
+    <header id="top" className={styles.header}>
+      <Link to="top" smooth={true} className={styles["logo-container"]}>
         {screenWidth > 767 ? (
           <>
             <img src={logoImg} alt="logo-img" />
@@ -34,7 +35,7 @@ const Header = () => {
             <img src={logoTextMob} alt="logo-text-mob" />
           </>
         )}
-      </a>
+      </Link>
       <div className={styles.toggler}>
         <button onClick={() => setShow(!show)}>
           <i>
@@ -45,10 +46,18 @@ const Header = () => {
       {!show && screenWidth <= 767 ? null : (
         <>
           <nav>
-            <a href="#">ABOUT</a>
-            <a href="#">SERVICES</a>
-            <a href="#">TECHNOLOGIES</a>
-            <a href="#">HOW TO</a>
+            <Link to="about-section" smooth={true}>
+              ABOUT
+            </Link>
+            <Link to="top" smooth={true}>
+              SERVICES
+            </Link>
+            <Link to="top" smooth={true}>
+              TECHNOLOGIES
+            </Link>
+            <Link to="top" smooth={true}>
+              HOW TO
+            </Link>
           </nav>
           <div className={styles["call-to-action"]}>
             <button className="btn btn-secondary">CONTACT US</button>

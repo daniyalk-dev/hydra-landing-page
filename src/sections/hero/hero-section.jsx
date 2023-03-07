@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import styles from "./hero-section.module.css";
 import heroImg from "../../assets/images/heroImg.png";
-// import heroShadow from "../../assets/images/heroShadow.png";
 import heroImgMob from "../../assets/images/heroImg-mobile.png";
-// import heroShadowMob from "../../assets/images/heroShadow-mobile.png";
 import rightArrowIcon from "../../assets/icons/arrow-small-right.png";
 import Slider from "../../components/contact-slider/contact-slider";
 import locationIcon from "../../assets/icons/location-icon.png";
@@ -44,7 +42,7 @@ const HeroSection = () => {
     },
   ];
   return (
-    <div id={styles["hero-section"]}>
+    <div id="hero-section" className={styles["hero-section"]}>
       <div className={styles.row}>
         <div className={styles.col}>
           <img className={styles.vector} src={vector4} alt="vector4" />
