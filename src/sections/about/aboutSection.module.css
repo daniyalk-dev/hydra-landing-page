@@ -44,14 +44,32 @@ h2 div:last-child a img {
     text-align: start;
 }
 
+.row:last-child {
+    position: relative;
+}
+
 .row:last-child .col:first-child img {
     max-width: 100%;
     height: auto;
 }
 
+.vector {
+    position: absolute;
+    z-index: -1;
+}
+
+.vector:nth-child(1) {
+    top: 30px;
+}
+
+.vector:nth-child(2) {
+    top: 280px;
+}
+
 @media screen and (max-width: 767px) {
     h2 {
         text-align: center;
+        font-size: 26px;
     }
 
     h2 div:last-child {
@@ -68,6 +86,10 @@ h2 div:last-child a img {
 
     .row .col {
         width: 100%;
+    }
+
+    .row .col p {
+        font-size: 12px;
     }
 
     .row:first-child .col:last-child {
@@ -95,4 +117,7 @@ h2 div:last-child a img {
         width: 80%;
     }
 
+    .vector {
+        display: none
+    }
 }

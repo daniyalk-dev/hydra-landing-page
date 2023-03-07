@@ -1,6 +1,8 @@
 import styles from "./aboutSection.module.css";
 import aboutHero from "../../assets/images/aboutHero.png";
 import longArrowIcon from "../../assets/icons/long-arrow.png";
+import vector1 from "../../assets/vectorImages/aboutSection/vector1.svg";
+import vector2 from "../../assets/vectorImages/aboutSection/vector2.svg";
 
 const AboutSection = () => {
   return (
@@ -29,7 +31,13 @@ const AboutSection = () => {
       </div>
       <div className={styles.row}>
         <div className={styles.col}>
-          <img src={aboutHero} alt="about-hero" />
+          <img src={vector1} alt="vector1" className={styles.vector} />
+          <img src={vector2} alt="vector2" className={styles.vector} />
+          <img
+            src={aboutHero}
+            alt="about-hero"
+            className={styles["about-hero"]}
+          />
         </div>
         <div className={styles.col}>
           <h2>
