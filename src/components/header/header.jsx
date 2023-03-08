@@ -49,7 +49,7 @@ const Header = () => {
             <Link to="about-section" smooth={true}>
               ABOUT
             </Link>
-            <Link to="top" smooth={true}>
+            <Link to="services-section" smooth={true}>
               SERVICES
             </Link>
             <Link to="top" smooth={true}>

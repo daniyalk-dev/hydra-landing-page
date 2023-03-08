@@ -1,7 +1,8 @@
 import "./App.css";
 import Header from "./components/header/header";
-import AboutSection from "./sections/about/aboutSection";
+import AboutSection from "./sections/about/about-section";
 import HeroSection from "./sections/hero/hero-section";
+import ServicesSection from "./sections/services/services-section";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Header />
         <HeroSection />
         <AboutSection />
+        <ServicesSection />
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
-import styles from "./aboutSection.module.css";
+import sharedStyles from "../shared-section.module.css";
+import styles from "./about-section.module.css";
 import aboutHero from "../../assets/images/aboutHero.png";
 import longArrowIcon from "../../assets/icons/long-arrow.png";
 import vector1 from "../../assets/vectorImages/aboutSection/vector1.svg";
@@ -7,9 +8,9 @@ import vector2 from "../../assets/vectorImages/aboutSection/vector2.svg";
 const AboutSection = () => {
   return (
     <div id="about-section" className={styles["about-section"]}>
-      <div className={styles.row}>
-        <div className={styles.col}>
-          <h2>
+      <div className={sharedStyles.row}>
+        <div className={sharedStyles.col}>
+          <h2 className={sharedStyles.heading}>
             <div>INTRODUCTION</div>
             <div>
               <span>TO HYDRA VR</span>
@@ -19,7 +20,7 @@ const AboutSection = () => {
             </div>
           </h2>
         </div>
-        <div className={styles.col}>
+        <div className={`${sharedStyles.col} ${sharedStyles["not-important"]}`}>
           <p>
             Vitae sapien pellentesque habitant morbi tristique senectus et netus
             et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit
@@ -29,8 +30,8 @@ const AboutSection = () => {
           </p>
         </div>
       </div>
-      <div className={styles.row}>
-        <div className={styles.col}>
+      <div className={`${sharedStyles.row} ${styles.row}`}>
+        <div className={`${sharedStyles.col} ${styles.col}`}>
           <img src={vector1} alt="vector1" className={styles.vector} />
           <img src={vector2} alt="vector2" className={styles.vector} />
           <img
@@ -39,7 +40,7 @@ const AboutSection = () => {
             className={styles["about-hero"]}
           />
         </div>
-        <div className={styles.col}>
+        <div className={`${sharedStyles.col} ${styles.col}`}>
           <h2>
             <div>ABOUT</div>
             <div>
