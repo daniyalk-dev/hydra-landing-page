@@ -1,0 +1,13 @@
+.service-card {
+    padding: 10px;
+}
+
+.image-wrapper {
+    border-radius: 50%;
+    background-color: #0e0e0e52;
+    width: 219px;
+    height: 219px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

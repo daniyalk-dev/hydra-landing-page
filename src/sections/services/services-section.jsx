@@ -1,6 +1,7 @@
 import sharedStyles from "../shared-section.module.css";
 import styles from "./services-section.module.css";
 import longArrowIcon from "../../assets/icons/long-arrow.png";
+import ServiceCardSlider from "../../components/service-card-slider/service-card-slider";
 
 const ServicesSection = () => {
   return (
@@ -27,6 +28,7 @@ const ServicesSection = () => {
           </p>
         </div>
       </div>
+      <ServiceCardSlider />
     </div>
   );
 };
