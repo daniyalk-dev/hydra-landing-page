@@ -1,0 +1,86 @@
+.service-card-slider {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 991px) {
+    .service-card-slider {
+        display: block;
+        position: relative;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .btn-wrapper {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
+        background-color: #0e0e0e52;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-wrapper:nth-child(1) {
+        left: 0;
+        transform: translate(-50%, -50%);
+    }
+
+    .btn-wrapper:nth-child(2) {
+        right: 0;
+        transform: translate(50%, -50%);
+    }
+
+    .btn-wrapper button {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: none;
+        font-weight: bold;
+        font-size: large;
+        color: #433D60;
+        background-image: linear-gradient(to right, #C0B7E8, #8176AF);
+
+    }
+
+    .slide.sliding-forward {
+        animation: slide-fwd 0.7s;
+    }
+
+    .slide.sliding-backward {
+        animation: slide-bwd 0.7s;
+    }
+
+    @keyframes slide-fwd {
+        from {
+            opacity: 0;
+            transform: translateX(200px);
+        }
+
+        to {
+            opacity: initial;
+            transform: initial;
+        }
+    }
+
+    @keyframes slide-bwd {
+        from {
+            opacity: 0;
+            transform: translateX(-200px);
+        }
+
+        to {
+            opacity: initial;
+            transform: initial;
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .service-card-slider {
+        max-width: 90%;
+    }
+}

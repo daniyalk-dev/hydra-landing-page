@@ -8,7 +8,7 @@ const ServiceCard = ({ image, title, desc }) => {
       </div>
       <h3>{title}</h3>
       <p>{desc}</p>
-      <button>TRY IT NOW</button>
+      <button className="btn btn-primary">TRY IT NOW</button>
     </div>
   );
 };
