@@ -2,6 +2,7 @@ import sharedStyles from "../shared-section.module.css";
 import styles from "./services-section.module.css";
 import longArrowIcon from "../../assets/icons/long-arrow.png";
 import ServiceCardSlider from "../../components/service-card-slider/service-card-slider";
+import vector from "../../assets/vectorImages/serviceSection/vector1.svg";
 
 const ServicesSection = () => {
   return (
@@ -29,6 +30,9 @@ const ServicesSection = () => {
         </div>
       </div>
       <ServiceCardSlider />
+      <div className={styles["svg-container"]}>
+        <img src={vector} alt="vector" />
+      </div>
     </div>
   );
 };
