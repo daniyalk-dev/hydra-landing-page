@@ -1,0 +1,20 @@
+.hero-background {
+    color: #ffffff;
+    background: url(../../assets/images/technologies-hero.png) center/cover no-repeat;
+    border-radius: 160px;
+}
+
+.hero-background h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 9%;
+}
+
+.hero-background h2>div:first-child {
+    margin-bottom: 10px;
+}
+
+.hero-background h2 span {
+    font-weight: 300;
+}

@@ -52,7 +52,7 @@ const Header = () => {
             <Link to="services-section" smooth={true}>
               SERVICES
             </Link>
-            <Link to="top" smooth={true}>
+            <Link to="technologies-section" smooth={true}>
               TECHNOLOGIES
             </Link>
             <Link to="top" smooth={true}>
