@@ -4,7 +4,7 @@ import TechnologiesSlider from "../../components/technologies-slider/technologie
 
 const TechnologiesSection = () => {
   return (
-    <div id="technologies-section">
+    <div id="technologies-section" className={styles["technologies-section"]}>
       <div className={styles["hero-background"]}>
         <h2>
           <div>TECHNOLOGIES & HARDWARE</div>

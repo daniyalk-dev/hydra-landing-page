@@ -7,10 +7,10 @@ import Slider from "../../components/contact-slider/contact-slider";
 import locationIcon from "../../assets/icons/location-icon.png";
 import phoneIcon from "../../assets/icons/phone-icon.png";
 import messageIcon from "../../assets/icons/message-icon.png";
-import vector1 from "../../assets/vectorImages/heroSection/vector1.svg";
-import vector2 from "../../assets/vectorImages/heroSection/vector2.svg";
-import vector3 from "../../assets/vectorImages/heroSection/vector3.svg";
-import vector4 from "../../assets/vectorImages/heroSection/vector4.svg";
+import vector1 from "../../assets/vector-images/hero-section/vector1.svg";
+import vector2 from "../../assets/vector-images/hero-section/vector2.svg";
+import vector3 from "../../assets/vector-images/hero-section/vector3.svg";
+import vector4 from "../../assets/vector-images/hero-section/vector4.svg";
 
 const HeroSection = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);

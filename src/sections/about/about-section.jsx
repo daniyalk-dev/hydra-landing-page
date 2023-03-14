@@ -2,8 +2,8 @@ import sharedStyles from "../shared-section.module.css";
 import styles from "./about-section.module.css";
 import aboutHero from "../../assets/images/aboutHero.png";
 import longArrowIcon from "../../assets/icons/long-arrow.png";
-import vector1 from "../../assets/vectorImages/aboutSection/vector1.svg";
-import vector2 from "../../assets/vectorImages/aboutSection/vector2.svg";
+import vector1 from "../../assets/vector-images/about-section/vector1.svg";
+import vector2 from "../../assets/vector-images/about-section/vector2.svg";
 
 const AboutSection = () => {
   return (
