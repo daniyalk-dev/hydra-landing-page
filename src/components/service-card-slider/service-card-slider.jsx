@@ -65,6 +65,7 @@ const ServiceCardSlider = () => {
     setActiveIndex(newIndex);
     setSliding("backward");
   };
+
   return (
     <div className={styles["service-card-slider"]}>
       {screenWidth <= 991 ? (
