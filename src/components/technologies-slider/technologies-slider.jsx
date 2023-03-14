@@ -50,14 +50,12 @@ const TechnologiesSlider = () => {
             </button>
           </div>
           <div
-            className={`${styles.slide} ${
+            className={`${styles["tech-icon-wrapper"]} ${
               sliding === "forward" ? styles["sliding-forward"] : ""
             } ${sliding === "backward" ? styles["sliding-backward"] : ""}`}
             onAnimationEnd={() => setSliding(null)}
           >
-            <div className={styles["tech-icon-wrapper"]}>
-              <img src={slides[activeIndex]} alt="tech-icon" />
-            </div>
+            <img src={slides[activeIndex]} alt="tech-icon" />
           </div>
         </>
       ) : (

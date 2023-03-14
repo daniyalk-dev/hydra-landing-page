@@ -64,11 +64,11 @@
         background-image: linear-gradient(to right, #C0B7E8, #8176AF);
     }
 
-    .slide.sliding-forward {
+    .sliding-forward {
         animation: slide-fwd 0.7s;
     }
 
-    .slide.sliding-backward {
+    .sliding-backward {
         animation: slide-bwd 0.7s;
     }
 
