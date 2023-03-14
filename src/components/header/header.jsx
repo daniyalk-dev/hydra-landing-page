@@ -55,7 +55,7 @@ const Header = () => {
             <Link to="technologies-section" smooth={true}>
               TECHNOLOGIES
             </Link>
-            <Link to="top" smooth={true}>
+            <Link to="how-to-section" smooth={true}>
               HOW TO
             </Link>
           </nav>
