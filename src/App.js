@@ -6,6 +6,7 @@ import ServicesSection from "./sections/services/services-section";
 import TechnologiesSection from "./sections/technologies/technologies-section";
 import HowToSection from "./sections/how-to/how-to-section";
 import ContactForm from "./components/contact-form/contact-form";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <TechnologiesSection />
         <HowToSection />
         <ContactForm />
+        <Footer />
       </div>
     </div>
   );
