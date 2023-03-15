@@ -1,13 +1,26 @@
 import styles from "./contact-form.module.css";
+import { useState, useEffect } from "react";
 import vector from "../../assets/vector-images/contact-form/vector1.svg";
+import vectorMob from "../../assets/vector-images/contact-form/vector1-mob.svg";
 
 const ContactForm = () => {
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  const resize = () => {
+    setScreenWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", resize);
+    return () => window.removeEventListener("resize", resize);
+  }, []);
+
   return (
     <div id="contact-form" className={styles["contact-form"]}>
       <h2>
         <div>JOIN HYDRA</div>
         <div className={styles["svg-container"]}>
-          <img src={vector} alt="vector" />
+          <img src={screenWidth <= 767 ? vectorMob : vector} alt="vector" />
         </div>
         <div>Let's Build Your VR Experience</div>
       </h2>

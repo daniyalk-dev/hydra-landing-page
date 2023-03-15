@@ -21,6 +21,11 @@ const Header = () => {
     return () => window.removeEventListener("resize", resize);
   }, []);
 
+  const handleContactButton = () => {
+    const element = document.getElementById("contact-form");
+    element?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <header id="top" className={styles.header}>
       <Link to="top" smooth={true} className={styles["logo-container"]}>
@@ -60,7 +65,9 @@ const Header = () => {
             </Link>
           </nav>
           <div className={styles["call-to-action"]}>
-            <button className="btn btn-secondary">CONTACT US</button>
+            <button className="btn btn-secondary" onClick={handleContactButton}>
+              CONTACT US
+            </button>
             <button className="btn btn-primary">JOIN HYDRA</button>
           </div>
         </>
