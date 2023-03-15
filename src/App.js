@@ -4,7 +4,8 @@ import AboutSection from "./sections/about/about-section";
 import HeroSection from "./sections/hero/hero-section";
 import ServicesSection from "./sections/services/services-section";
 import TechnologiesSection from "./sections/technologies/technologies-section";
-import HowTo from "./sections/how-to/how-to";
+import HowToSection from "./sections/how-to/how-to-section";
+import ContactForm from "./components/contact-form/contact-form";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
         <AboutSection />
         <ServicesSection />
         <TechnologiesSection />
-        <HowTo />
+        <HowToSection />
+        <ContactForm />
       </div>
     </div>
   );
