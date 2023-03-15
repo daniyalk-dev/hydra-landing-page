@@ -45,7 +45,7 @@ const HeroSection = () => {
     <div id="hero-section" className={styles["hero-section"]}>
       <div className={styles.row}>
         <div className={styles.col}>
-          <img className={styles.vector} src={vector4} alt="vector4" />
+          <img className={styles.vector} src={vector4} alt="vector" />
           <h2>
             <span>Dive</span> into The Depths Of <span>Virtual Reality</span>
           </h2>
@@ -64,9 +64,9 @@ const HeroSection = () => {
           </div>
         </div>
         <div className={styles.col}>
-          <img className={styles.vector} src={vector1} alt="vector1" />
-          <img className={styles.vector} src={vector2} alt="vector2" />
-          <img className={styles.vector} src={vector3} alt="vector3" />
+          <img className={styles.vector} src={vector1} alt="vector" />
+          <img className={styles.vector} src={vector2} alt="vector" />
+          <img className={styles.vector} src={vector3} alt="vector" />
           <div id={styles["heroImgWrapper"]}>
             <img
               src={screenWidth > 575 ? heroImg : heroImgMob}

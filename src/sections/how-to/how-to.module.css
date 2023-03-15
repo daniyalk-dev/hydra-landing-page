@@ -1,3 +1,36 @@
 .how-to-section {
     margin-bottom: 60px;
+    position: relative;
+}
+
+.svg-container {
+    position: absolute;
+    top: 35%;
+    left: -9%;
+    width: 100vw;
+    z-index: -1;
+}
+
+.svg-container img {
+    min-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1440px) {
+    .svg-container img {
+        min-width: unset;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .svg-container {
+        top: 40%
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .svg-container {
+        display: none;
+    }
 }

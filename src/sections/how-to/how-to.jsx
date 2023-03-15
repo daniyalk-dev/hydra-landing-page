@@ -2,6 +2,7 @@ import styles from "./how-to.module.css";
 import sharedStyles from "../shared-section.module.css";
 import longArrowIcon from "../../assets/icons/long-arrow.png";
 import ReasonsSlider from "../../components/reasons-slider/reasons-slider";
+import vector from "../../assets/vector-images/how-to-section/vector1.svg";
 
 const HowTo = () => {
   return (
@@ -27,6 +28,9 @@ const HowTo = () => {
             in. Lectus magna fringilla urna porttitor rhoncus vitae.
           </p>
         </div>
+      </div>
+      <div className={styles["svg-container"]}>
+        <img src={vector} alt="vector" />
       </div>
       <ReasonsSlider />
     </div>

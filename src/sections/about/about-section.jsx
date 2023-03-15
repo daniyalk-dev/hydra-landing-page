@@ -32,8 +32,8 @@ const AboutSection = () => {
       </div>
       <div className={`${sharedStyles.row} ${styles.row}`}>
         <div className={`${sharedStyles.col} ${styles.col}`}>
-          <img src={vector1} alt="vector1" className={styles.vector} />
-          <img src={vector2} alt="vector2" className={styles.vector} />
+          <img src={vector1} alt="vector" className={styles.vector} />
+          <img src={vector2} alt="vector" className={styles.vector} />
           <img
             src={aboutHero}
             alt="about-hero"
