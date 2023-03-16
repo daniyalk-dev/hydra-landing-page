@@ -46,15 +46,23 @@
     font-size: 14px;
     border: 2px solid #ffffff;
     border-radius: 40px;
-    background-color: transparent;
     color: #ffffff;
     padding: 25px 40px;
     margin-bottom: 35px;
     box-sizing: border-box;
+    -webkit-text-fill-color: #ffffff !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    caret-color: #ffffff;
 }
 
 .form-group>*::placeholder {
     color: #ffffff;
+}
+
+.form-group>*:focus {
+    outline: none;
+    border: 2px solid var(--secondary-color);
 }
 
 .form-group textarea {
