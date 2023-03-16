@@ -2,7 +2,9 @@ import styles from "./footer.module.css";
 import logo from "../../assets/images/logo-footer.png";
 import vectorCol from "../../assets/vector-images/footer/vector1.svg";
 import vector2 from "../../assets/vector-images/footer/vector2.svg";
+import vector2Mob from "../../assets/vector-images/footer/vector2-mob.svg";
 import vector3 from "../../assets/vector-images/footer/vector3.svg";
+import vector3Mob from "../../assets/vector-images/footer/vector3-mob.svg";
 import { Link } from "react-scroll";
 
 const Footer = () => {
@@ -73,6 +75,10 @@ const Footer = () => {
             <button className="btn btn-primary">BUILD YOUR WORLD</button>
           </div>
         </div>
+        <img className={styles.vector2} src={vector2} alt="vector" />
+        <img className={styles.vector3} src={vector3} alt="vector" />
+        <img className={styles["vector2-mob"]} src={vector2Mob} alt="vector" />
+        <img className={styles["vector3-mob"]} src={vector3Mob} alt="vector" />
       </div>
       <div className={styles["border-line"]}></div>
       <div className={styles.copyright}>
